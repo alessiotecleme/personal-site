@@ -38,7 +38,21 @@ body {
 .container {
     max-width: 1200px;  /* Optional: limits how wide content can get */
     margin: 0 auto;     /* Centers the container */
-    padding: 80px;      /* Adds padding inside the container */
+    padding: 20px;      /* Adds padding inside the container */
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 80px;
+    }
 }
 
 a {
