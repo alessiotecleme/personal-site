@@ -1,13 +1,41 @@
-body {
-  max-width: 40em;
-  margin: 0 auto;
-  padding: 5px;
-  font-family: Georgia, serif;
-  font-size: 18px;
+h1 {
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.7em;
+  margin-bottom: 0;  /* Remove bottom margin from h1 */
+}
+h2 {
+  font-family: Inter, sans-serif;
+  font-weight: normal;
+  font-size: 17px;
   line-height: 1.6em;
+  color: gray;
+  margin-top: 0px;  /* Pull h2 up closer to h1 with negative margin */
+  /* You can adjust this value: try -5px, -15px, etc. until you get the desired spacing */
+}
+body {
+  max-width: 52em;
+  margin: 0 auto;
+  padding: 8px;
+  font-family: Inter, sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.8em;
   color: black;
 }
-h1, h2, h3 {
-  font-family: sans-serif;
-  font-weight: normal;
+/* Option 2: Create a container class */
+.container {
+    max-width: 1200px;  /* Optional: limits how wide content can get */
+    margin: 0 auto;     /* Centers the container */
+    padding: 80px;      /* Adds padding inside the container */
+}
+
+a {
+    color: #0066cc;  /* Link color */
+    text-decoration: none;  /* Removes underline */
+}
+
+a:hover {
+    text-decoration: underline;  /* Adds underline on hover */
 }
