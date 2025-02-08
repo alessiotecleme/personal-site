@@ -14,6 +14,16 @@ h2 {
   margin-top: 0px;  /* Pull h2 up closer to h1 with negative margin */
   /* You can adjust this value: try -5px, -15px, etc. until you get the desired spacing */
 }
+h3 {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: black;
+  margin-top: 0px;  /* Pull h2 up closer to h1 with negative margin */
+  /* You can adjust this value: try -5px, -15px, etc. until you get the desired spacing */
+  text-transform: uppercase;
+}
 body {
   max-width: 52em;
   margin: 0 auto;
@@ -25,7 +35,6 @@ body {
   letter-spacing: -0.5%;
   color: black;
 }
-/* Option 2: Create a container class */
 .container {
     max-width: 1200px;  /* Optional: limits how wide content can get */
     margin: 0 auto;     /* Centers the container */
