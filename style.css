@@ -23,7 +23,7 @@ h3 {
   margin-top: 0px;  /* Pull h2 up closer to h1 with negative margin */
   /* You can adjust this value: try -5px, -15px, etc. until you get the desired spacing */
   text-transform: uppercase;
-  margin-bottom: 0px;  /* Adds space below headings */
+  margin-bottom: 16px;  /* Smaller spacing for mobile */
 }
 body {
   max-width: 52em;
@@ -65,6 +65,18 @@ a:hover {
     text-decoration: underline;  /* Adds underline on hover */
 }
 
+/* Default (mobile) styles */
 .section {
-    margin-bottom: 40px;  /* Adds space below each section */
+    margin-bottom: 24px;  /* Smaller spacing for mobile */
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    .section {
+        margin-bottom: 40px;  /* Larger spacing for desktop */
+    }
+    
+    h3 {
+        margin-bottom: 20px;  /* Larger spacing for desktop */
+    }
 }
