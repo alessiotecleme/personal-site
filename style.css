@@ -23,7 +23,7 @@ h3 {
   margin-top: 0px;  /* Pull h2 up closer to h1 with negative margin */
   /* You can adjust this value: try -5px, -15px, etc. until you get the desired spacing */
   text-transform: uppercase;
-  margin-bottom: 16px;  /* Smaller spacing for mobile */
+  margin-bottom: 8px;  /* Smaller spacing for mobile */
 }
 body {
   max-width: 52em;
