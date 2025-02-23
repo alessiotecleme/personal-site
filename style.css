@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: normal;
     color: #666;
     margin-top: 0;
@@ -37,7 +37,7 @@ h3 {
     font-size: 16px;
     color: #666;
     margin-top: 32px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 h4 {
@@ -47,7 +47,7 @@ h4 {
 
 .subtitle {
     color: #666;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 16px;
 }
 
