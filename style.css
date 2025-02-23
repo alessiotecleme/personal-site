@@ -78,6 +78,17 @@ a:hover {
     color: #FF9500;
 }
 
+/* Add these more specific rules to override any potential conflicts */
+p a {
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    border-bottom: none !important;
+}
+
+p a:hover {
+    border-bottom: none !important;
+}
+
 .section {
     margin-bottom: 32px;
 }
