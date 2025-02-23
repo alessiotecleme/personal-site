@@ -59,14 +59,14 @@ h4 {
     color: #666;
     font-size: 17px;
     margin: 0;
-    margin-top: -2px;    /* Much smaller negative margin */
+    margin-top: 4px;    /* Much smaller negative margin */
     margin-bottom: 16px;
     line-height: 1.2;  /* Match line height */
 }
 
 /* Extra specific rules to ensure consistent spacing */
 h4 + .subtitle {
-    margin-top: -2px;    /* Match the change here too */
+    margin-top: 4px;    /* Match the change here too */
 }
 
 h4:not(:has(+ .subtitle)):not(:last-child) {
