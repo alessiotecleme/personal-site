@@ -52,21 +52,21 @@ h4 {
     font-weight: 600;
     margin: 0;
     margin-bottom: 0;
-    line-height: 1.2;  /* Reduce line height to tighten spacing */
+    line-height: 1.2;  /* Keep line height tight */
 }
 
 .subtitle {
     color: #666;
     font-size: 17px;
     margin: 0;
-    margin-top: 0px;    /* Use negative margin to pull up subtitle */
+    margin-top: -2px;    /* Much smaller negative margin */
     margin-bottom: 16px;
     line-height: 1.2;  /* Match line height */
 }
 
 /* Extra specific rules to ensure consistent spacing */
 h4 + .subtitle {
-    margin-top: -10px;    /* Match the change here too */
+    margin-top: -2px;    /* Match the change here too */
 }
 
 h4:not(:has(+ .subtitle)):not(:last-child) {
