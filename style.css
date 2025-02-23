@@ -64,7 +64,16 @@ h4 {
 
 /* For h4 elements that don't have a subtitle */
 h4:not(:last-child) {
-    margin-bottom: 24px;  /* Increased from 16px to 24px */
+    margin-bottom: 24px;  /* Controls spacing between standalone h4s */
+}
+
+/* Extra specific rules to ensure consistent spacing */
+h4 + .subtitle {
+    margin-top: 4px;
+}
+
+h4:not(:has(+ .subtitle)):not(:last-child) {
+    margin-bottom: 24px;
 }
 
 p {
