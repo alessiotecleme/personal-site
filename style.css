@@ -59,7 +59,7 @@ h4 {
     color: #666;
     font-size: 17px;
     margin: 0;
-    margin-top: -10px;    /* Use negative margin to pull up subtitle */
+    margin-top: 0px;    /* Use negative margin to pull up subtitle */
     margin-bottom: 16px;
     line-height: 1.2;  /* Match line height */
 }
