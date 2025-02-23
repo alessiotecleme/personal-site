@@ -51,7 +51,7 @@ h4 {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
 .subtitle {
@@ -59,12 +59,12 @@ h4 {
     font-size: 17px;
     margin: 0;
     margin-top: 4px;
-    margin-bottom: 16px;  /* Controls spacing between groups */
+    margin-bottom: 16px;  /* Controls spacing between groups with subtitles */
 }
 
 /* For h4 elements that don't have a subtitle */
 h4:not(:last-child) {
-    margin-bottom: 16px;  /* Same spacing as after subtitle */
+    margin-bottom: 24px;  /* Increased from 16px to 24px */
 }
 
 p {
