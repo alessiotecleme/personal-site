@@ -59,23 +59,18 @@ h4 {
     color: #666;
     font-size: 17px;
     margin: 0;
-    margin-top: 0px;    /* Removed spacing completely */
+    margin-top: -10px;    /* Use negative margin to pull up subtitle */
     margin-bottom: 16px;
     line-height: 1.2;  /* Match line height */
 }
 
-/* For h4 elements that don't have a subtitle */
-h4:not(:last-child) {
-    margin-bottom: 24px;  /* Controls spacing between standalone h4s */
-}
-
 /* Extra specific rules to ensure consistent spacing */
 h4 + .subtitle {
-    margin-top: 0px;    /* Match the change here too */
+    margin-top: -10px;    /* Match the change here too */
 }
 
 h4:not(:has(+ .subtitle)):not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 24px;  /* Controls spacing between standalone h4s */
 }
 
 p {
