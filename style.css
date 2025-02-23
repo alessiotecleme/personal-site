@@ -59,7 +59,7 @@ h4 {
     font-size: 17px;
     margin: 0;
     margin-top: 4px;
-    margin-bottom: 16px;  /* Controls spacing between groups with subtitles */
+    margin-bottom: 8px;  /* Controls spacing between groups with subtitles */
 }
 
 /* For h4 elements that don't have a subtitle */
