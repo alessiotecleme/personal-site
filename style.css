@@ -51,13 +51,15 @@ h4 {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 0;   /* Remove bottom margin since subtitle has top margin */
 }
 
 .subtitle {
     color: #666;
     font-size: 17px;
-    margin-bottom: 16px;
+    margin: 0;          /* Reset all margins first */
+    margin-top: 4px;    /* Add specific space after h4 */
+    margin-bottom: 16px; /* Space before next element */
 }
 
 p {
