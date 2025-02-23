@@ -52,6 +52,7 @@ h4 {
     font-weight: 600;
     margin: 0;
     margin-bottom: 0;
+    line-height: 1.2;  /* Reduce line height to tighten spacing */
 }
 
 .subtitle {
@@ -60,6 +61,7 @@ h4 {
     margin: 0;
     margin-top: 0px;    /* Removed spacing completely */
     margin-bottom: 16px;
+    line-height: 1.2;  /* Match line height */
 }
 
 /* For h4 elements that don't have a subtitle */
