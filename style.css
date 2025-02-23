@@ -51,15 +51,20 @@ h4 {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
-    margin-bottom: 0;   /* Remove bottom margin since subtitle has top margin */
+    margin-bottom: 0;
 }
 
 .subtitle {
     color: #666;
     font-size: 17px;
-    margin: 0;          /* Reset all margins first */
-    margin-top: 4px;    /* Add specific space after h4 */
-    margin-bottom: 16px; /* Space before next element */
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 16px;  /* This controls spacing between groups */
+}
+
+/* For h4 elements that don't have a subtitle */
+h4:not(:last-child) {
+    margin-bottom: 16px;  /* Same spacing as after subtitle */
 }
 
 p {
