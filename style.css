@@ -39,7 +39,7 @@ h3 {
     color: #666;
     margin: 0;  /* Reset all margins first */
     margin-top: 32px;
-    margin-bottom: 4px;  /* Explicit spacing */
+    margin-bottom: 8px;  /* Explicit spacing */
     line-height: 1.4;  /* Optional: control line height explicitly */
 }
 
