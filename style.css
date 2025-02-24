@@ -138,6 +138,7 @@ h1 .header-link:hover {
 h2 .header-link,
 h2 a.header-link {
     color: #666 !important;  /* Gray color for Product Designer */
+    font-weight: normal;     /* Set to regular weight */
 }
 
 h2 .header-link:hover {
