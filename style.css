@@ -128,20 +128,20 @@ p a:hover {
 
 h1 .header-link, 
 h1 a.header-link {
-    color: #FF9500;  /* Orange color for name */
+    color: #FF9500 !important;  /* Orange color for name with !important */
 }
 
 h1 .header-link:hover {
-    color: #FF9500;  /* Keep orange on hover */
+    color: #FF9500 !important;  /* Keep orange on hover */
 }
 
 h2 .header-link,
 h2 a.header-link {
-    color: #666;  /* Gray color for Product Designer */
+    color: #666 !important;  /* Gray color for Product Designer */
 }
 
 h2 .header-link:hover {
-    color: #666;  /* Keep gray on hover */
+    color: #666 !important;  /* Keep gray on hover */
 }
 
 h1 .header-link + .header-link {
