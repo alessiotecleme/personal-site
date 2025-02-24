@@ -154,12 +154,12 @@ h1 .header-link:hover {
 
 h2 .header-link,
 h2 a.header-link {
-    color: #151515 !important;  /* Gray color for Product Designer */
+    color: #666464 !important;  /* Gray color for Product Designer */
     font-weight: normal;     /* Set to regular weight */
 }
 
 h2 .header-link:hover {
-    color: #151515 !important;  /* Keep gray on hover */
+    color: #666464 !important;  /* Keep gray on hover */
 }
 
 h1 .header-link + .header-link {
