@@ -40,6 +40,7 @@ h3 {
     margin: 0;
     margin-top: 32px;
     margin-bottom: 4px;
+    line-height: 1.2;  /* Add explicit line height */
 }
 
 /* Add specific spacing between h3 and the first h4 */
@@ -52,8 +53,8 @@ h4 {
     font-weight: 600;
     margin: 0;
     margin-bottom: 0;
-    line-height: 1.2;
-    color: #151515;  /* Explicit color for h4 */
+    line-height: 1.2;  /* Match line height */
+    color: #151515;
 }
 
 /* Make all links in h4 match the same color */
@@ -83,7 +84,7 @@ h4:not(a), h4 > a {
 
 /* Extra specific rules to ensure consistent spacing */
 h4 + .subtitle {
-    margin-top: 8px;    /* Match the change here too */
+    margin-top: -2px;    /* Match the change here too */
 }
 
 h4:not(:has(+ .subtitle)):not(:last-child) {
