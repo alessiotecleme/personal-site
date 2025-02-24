@@ -121,3 +121,12 @@ p a:hover {
         padding: 40px;
     }
 }
+
+.header-link {
+    text-decoration: none;
+    color: #FF9500; /* For h1 */
+}
+
+.header-link + .header-link {
+    color: #666; /* For h2 */
+}
