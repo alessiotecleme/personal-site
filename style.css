@@ -124,7 +124,11 @@ p a:hover {
 
 .header-link {
     text-decoration: none;
-    color: #FF9500; /* For h1 */
+    color: #666; /* Original color for Product Designer */
+}
+
+.header-link:hover {
+    color: #666; /* Keep the same color on hover */
 }
 
 .header-link + .header-link {
