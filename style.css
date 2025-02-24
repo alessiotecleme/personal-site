@@ -56,13 +56,20 @@ h4 {
     color: #151515;  /* Explicit color for h4 */
 }
 
-/* Make links in h4 match the same color */
+/* Make all links in h4 match the same color */
 h4 a, h4 a:link, h4 a:visited {
-    color: #151515 !important;
+    color: #151515 !important;  /* Same dark color */
+    text-decoration: none !important;
+    font-weight: 600 !important;
 }
 
 h4 a:hover {
     color: #FF9500 !important;  /* Orange color on hover */
+}
+
+/* Extra specific rules to ensure color consistency */
+h4:not(a), h4 > a {
+    color: #151515 !important;  /* Force same color for both linked and non-linked h4s */
 }
 
 .subtitle {
