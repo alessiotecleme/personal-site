@@ -159,7 +159,7 @@ h2 a.header-link {
 }
 
 h2 .header-link:hover {
-    color: #151515 !important;  /* Keep gray on hover */
+    color: #666464 !important;  /* Keep gray on hover */
 }
 
 h1 .header-link + .header-link {
