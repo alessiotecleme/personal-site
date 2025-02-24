@@ -151,8 +151,9 @@ h1 .header-link + .header-link {
 
 .image-placeholder {
     width: 100%;          /* Full width of container */
-    height: 340px;        /* Fixed height as specified */
+    height: 280px;        /* Fixed height as specified */
     border: 1px solid #D2D2D2;  /* Light gray border */
     border-radius: 8px;   /* Rounded corners */
     margin: 24px 0;      /* Add some vertical spacing */
+    background-color: #FCFCFC;  /* Light gray fill */
 }
