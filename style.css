@@ -80,7 +80,7 @@ p {
 
 /* Base link styles */
 a {
-    color: #666464;
+    color: #151515;
     text-decoration: none !important;
     font-weight: 600 !important;
     border-bottom: none !important;
@@ -138,16 +138,16 @@ h1 .header-link:hover {
 
 h2 .header-link,
 h2 a.header-link {
-    color: #666464 !important;  /* Gray color for Product Designer */
+    color: #151515 !important;  /* Gray color for Product Designer */
     font-weight: normal;     /* Set to regular weight */
 }
 
 h2 .header-link:hover {
-    color: #666464 !important;  /* Keep gray on hover */
+    color: #151515 !important;  /* Keep gray on hover */
 }
 
 h1 .header-link + .header-link {
-    color: #666464; /* For h2 */
+    color: #151515; /* For h2 */
 }
 
 .image-placeholder {
