@@ -52,7 +52,7 @@ h3 + h4 {
 
 h4 {
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0;
     margin-bottom: 0;
     line-height: 1.2;
@@ -63,7 +63,7 @@ h4 {
 h4 a, h4 a:link, h4 a:visited {
     color: #151515 !important;  /* Same dark color */
     text-decoration: none !important;
-    font-weight: 700 !important;
+    font-weight: 400 !important;
 }
 
 h4 a:hover {
