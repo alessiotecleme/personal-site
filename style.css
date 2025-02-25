@@ -23,7 +23,7 @@ h1 {
     font-size: 24px;
     font-weight: 400;  /* DM Serif Display only comes in regular weight */
     margin-bottom: 0;
-    color: #FF9900;  /* Orange color for name */
+    color: #FF8800;  /* Orange color for name */
 }
 
 h2 {
@@ -39,7 +39,7 @@ h3 {
     text-transform: capitalize;
     font-size: 17px;
     letter-spacing: 0.5px;  /* Add space between letters */
-    color: #FF9900;
+    color: #FF8800;
     margin: 0;
     margin-top: 32px;
     margin-bottom: 4px;
@@ -67,7 +67,7 @@ h4 a, h4 a:link, h4 a:visited {
 }
 
 h4 a:hover {
-    color: #FF9500 !important;  /* Orange color on hover */
+    color: #FF8800 !important;  /* Orange color on hover */
 }
 
 /* Extra specific rules to ensure color consistency */
@@ -108,7 +108,7 @@ a {
 
 a:hover {
     border-bottom: none !important;
-    color: #FF9900;
+    color: #FF8800;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;  /* Safari-specific */
 }
@@ -148,11 +148,11 @@ p a:hover {
 
 h1 .header-link, 
 h1 a.header-link {
-    color: #FF9900 !important;  /* Orange color for name with !important */
+    color: #FF8800 !important;  /* Orange color for name with !important */
 }
 
 h1 .header-link:hover {
-    color: #FF9500 !important;  /* Keep orange on hover */
+    color: #FF8800 !important;  /* Keep orange on hover */
 }
 
 h2 .header-link,
