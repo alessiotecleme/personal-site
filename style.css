@@ -39,7 +39,7 @@ h3 {
     text-transform: capitalize;
     font-size: 17px;
     letter-spacing: 0.5px;  /* Add space between letters */
-    color: #FF8800;
+    color: #FF8800;  /* Match h1 color */
     margin: 0;
     margin-top: 32px;
     margin-bottom: 4px;
@@ -148,7 +148,7 @@ p a:hover {
 
 h1 .header-link, 
 h1 a.header-link {
-    color: #FF8800 !important;  /* Orange color for name with !important */
+    color: #FF8800 !important;  /* Match h1 color with !important */
 }
 
 h1 .header-link:hover {
