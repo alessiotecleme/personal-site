@@ -19,8 +19,9 @@ body {
 }
 
 h1 {
+    font-family: 'DM Serif Display', serif;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;  /* DM Serif Display only comes in regular weight */
     margin-bottom: 0;
     color: #FF9900;  /* Orange color for name */
 }
@@ -37,6 +38,7 @@ h3 {
     font-family: 'DM Serif Display', serif;
     text-transform: capitalize;
     font-size: 17px;
+    letter-spacing: 0.5px;  /* Add space between letters */
     color: #FF9900;
     margin: 0;
     margin-top: 32px;
