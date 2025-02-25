@@ -8,7 +8,7 @@
 body {
     font-family: 'Space Mono', monospace !important;
     line-height: 1.6;
-    color: #333;
+    color: #333333;
     max-width: 52em;
     margin: 0 auto;
     padding: 20px;
@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     font-size: 17px;
-    font-weight: normal;
+    font-weight: 400;
     color: #666464;
     margin-top: -5px;     /* Controls spacing after h1 */
     margin-bottom: 24px;  /* Controls spacing before paragraph */
@@ -56,12 +56,12 @@ h4 {
     margin: 0;
     margin-bottom: 0;
     line-height: 1.2;
-    color: #151515;  /* Explicit color for h4 */
+    color: #333333;  /* Explicit color for h4 */
 }
 
 /* Make all links in h4 match the same color */
 h4 a, h4 a:link, h4 a:visited {
-    color: #151515 !important;  /* Same dark color */
+    color: #333333 !important;  /* Same dark color */
     text-decoration: none !important;
     font-weight: 400 !important;
 }
@@ -72,7 +72,7 @@ h4 a:hover {
 
 /* Extra specific rules to ensure color consistency */
 h4:not(a), h4 > a {
-    color: #151515 !important;  /* Force same color for both linked and non-linked h4s */
+    color: #333333 !important;  /* Force same color for both linked and non-linked h4s */
 }
 
 .subtitle {
@@ -99,7 +99,7 @@ p {
 
 /* Base link styles */
 a {
-    color: #151515;
+    color: #333333;
     text-decoration: none !important;
     font-weight: 600 !important;
     border-bottom: none !important;
@@ -166,7 +166,7 @@ h2 .header-link:hover {
 }
 
 h1 .header-link + .header-link {
-    color: #151515; /* For h2 */
+    color: #333333; /* For h2 */
 }
 
 .image-placeholder {
