@@ -1,51 +1,179 @@
-h1 {
-  font-family: Inter, sans-serif;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 28px;
-  margin-bottom: 0;  /* Remove bottom margin from h1 */
-}
-h2 {
-  font-family: Inter, sans-serif;
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 22px;
-  color: gray;
-  margin-top: 0px;  /* Pull h2 up closer to h1 with negative margin */
-  /* You can adjust this value: try -5px, -15px, etc. until you get the desired spacing */
-}
-h3 {
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 22px;
-  color: black;
-  margin-top: 0px;  /* Pull h2 up closer to h1 with negative margin */
-  /* You can adjust this value: try -5px, -15px, etc. until you get the desired spacing */
-  text-transform: uppercase;
-}
-body {
-  max-width: 52em;
-  margin: 0 auto;
-  padding: 8px;
-  font-family: Inter, sans-serif;
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 24px;
-  letter-spacing: -0.5%;
-  color: black;
-}
-.container {
-    max-width: 1200px;  /* Optional: limits how wide content can get */
-    margin: 0 auto;     /* Centers the container */
-    padding: 80px;      /* Adds padding inside the container */
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Space Mono', monospace !important;
+    line-height: 1.6;
+    color: #333;
+    max-width: 52em;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;  /* DM Serif Display only comes in regular weight */
+    margin-bottom: 0;
+    color: #FF8800;  /* Orange color for name */
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: normal;
+    color: #666464;
+    margin-top: -5px;     /* Controls spacing after h1 */
+    margin-bottom: 24px;  /* Controls spacing before paragraph */
+}
+
+h3 {
+    font-family: 'DM Serif Display', serif;
+    text-transform: capitalize;
+    font-size: 17px;
+    letter-spacing: 0.5px;  /* Add space between letters */
+    color: #FF8800;  /* Match h1 color */
+    margin: 0;
+    margin-top: 32px;
+    margin-bottom: 4px;
+}
+
+/* Add specific spacing between h3 and the first h4 */
+h3 + h4 {
+    margin-top: 12px;  /* Adjust this value to control spacing after h3 */
+}
+
+h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+    color: #151515;  /* Explicit color for h4 */
+}
+
+/* Make all links in h4 match the same color */
+h4 a, h4 a:link, h4 a:visited {
+    color: #151515 !important;  /* Same dark color */
+    text-decoration: none !important;
+    font-weight: 700 !important;
+}
+
+h4 a:hover {
+    color: #FF8800 !important;  /* Orange color on hover */
+}
+
+/* Extra specific rules to ensure color consistency */
+h4:not(a), h4 > a {
+    color: #151515 !important;  /* Force same color for both linked and non-linked h4s */
+}
+
+.subtitle {
+    color: #666464;
+    font-size: 17px;
+    margin: 0;
+    margin-top: 8px;    /* Much smaller negative margin */
+    margin-bottom: 24px;
+    line-height: 1.2;  /* Match line height */
+}
+
+/* Extra specific rules to ensure consistent spacing */
+h4 + .subtitle {
+    margin-top: 8px;    /* Match the change here too */
+}
+
+h4:not(:has(+ .subtitle)):not(:last-child) {
+    margin-bottom: 24px;  /* Controls spacing between standalone h4s */
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+/* Base link styles */
 a {
-    color: #0066cc;  /* Link color */
-    text-decoration: none;  /* Removes underline */
+    color: #151515;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    border-bottom: none !important;
+    -webkit-text-decoration: none !important;  /* Safari-specific */
 }
 
 a:hover {
-    text-decoration: underline;  /* Adds underline on hover */
+    border-bottom: none !important;
+    color: #FF8800;
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;  /* Safari-specific */
+}
+
+/* Extra specific rules for links in paragraphs */
+p a, p a:link, p a:visited {
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    border-bottom: none !important;
+    -webkit-text-decoration: none !important;  /* Safari-specific */
+}
+
+p a:hover {
+    border-bottom: none !important;
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;  /* Safari-specific */
+}
+
+.section {
+    margin-bottom: 32px;
+}
+
+/* Responsive design */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+
+    body {
+        padding: 40px;
+    }
+}
+
+.header-link {
+    text-decoration: none;
+}
+
+h1 .header-link, 
+h1 a.header-link {
+    color: #FF8800 !important;  /* Match h1 color with !important */
+}
+
+h1 .header-link:hover {
+    color: #FF8800 !important;  /* Keep orange on hover */
+}
+
+h2 .header-link,
+h2 a.header-link {
+    color: #666464 !important;  /* Gray color for Product Designer */
+    font-weight: normal;     /* Set to regular weight */
+}
+
+h2 .header-link:hover {
+    color: #666464 !important;  /* Keep gray on hover */
+}
+
+h1 .header-link + .header-link {
+    color: #151515; /* For h2 */
+}
+
+.image-placeholder {
+    width: 100%;          /* Full width of container */
+    height: 280px;        /* Fixed height as specified */
+    border: 1px solid #D2D2D2;  /* Light gray border */
+    border-radius: 8px;   /* Rounded corners */
+    margin: 24px 0;      /* Add some vertical spacing */
+    background-color: #FCFCFC;  /* Light gray fill */
 }
