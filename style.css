@@ -27,6 +27,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'DM Serif Display', serif;
     font-size: 17px;
     font-weight: 400;
     color: #666464;
@@ -36,6 +37,7 @@ h2 {
 
 h3 {
     font-family: 'Space Mono', monospace;
+    font-weight: 400;
     text-transform: capitalize;
     font-size: 17px;
     letter-spacing: 0.5px;  /* Add space between letters */
