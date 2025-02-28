@@ -178,4 +178,10 @@ h1 .header-link + .header-link {
     border-radius: 8px;   /* Rounded corners */
     margin: 24px 0;      /* Add some vertical spacing */
     background-color: #FCFCFC;  /* Light gray fill */
+    transition: transform 0.3s ease; /* Move transition here */
+}
+
+.image-placeholder:hover {
+    transform: scale(1.02);
+    /* No need for transition here anymore */
 }
