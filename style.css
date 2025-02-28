@@ -172,31 +172,37 @@ h1 .header-link + .header-link {
 }
 
 .image-placeholder {
-    width: 100%;          /* Full width of container */
-    height: 536px;        /* Fixed height as specified */
-    border: 1px solid #D2D2D2;  /* Light gray border */
-    border-radius: 8px;   /* Rounded corners */
-    margin: 24px 0;      /* Add some vertical spacing */
-    background-color: #FCFCFC;  /* Light gray fill */
-    transform: scale(1);  /* Explicitly set initial state */
-    transition: all 0.3s ease; /* Use 'all' instead of just 'transform' */
-    -webkit-transition: all 0.3s ease;
-    overflow: hidden;     /* Prevent image from spilling out */
-    display: flex;        /* Center the image */
-    align-items: center;  /* Vertically center */
-    justify-content: center; /* Horizontally center */
-    padding: 32px 80px; /* 20px top/bottom, 30px left/right */
-    box-sizing: border-box; /* Make sure padding is included in width/height */
+    width: 100%;
+    height: 280px;
+    border: 1px solid #D2D2D2;
+    border-radius: 8px;
+    margin: 24px 0;
+    background-color: #FCFCFC;
+    position: relative; /* Add this for absolute positioning of the image */
+    overflow: hidden;
+    /* Remove flex display which might be causing issues */
 }
 
 .image-placeholder img {
-    max-width: 100%;      /* Image will respect the container width minus padding */
-    max-height: 100%;     /* Image will respect the container height minus padding */
-    object-fit: contain;  /* Maintain aspect ratio */
-    display: block;       /* Remove any extra space below the image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 40px);
+    max-height: calc(100% - 40px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* Add vendor prefixes for transform */
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
+/* Keep the hover effect separate */
 .image-placeholder:hover {
     transform: scale(1.02);
     -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transition: transform 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
 }
