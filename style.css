@@ -178,10 +178,15 @@ h1 .header-link + .header-link {
     border-radius: 8px;   /* Rounded corners */
     margin: 24px 0;      /* Add some vertical spacing */
     background-color: #FCFCFC;  /* Light gray fill */
-    transition: transform 0.3s ease; /* Move transition here */
+    transform: scale(1);  /* Explicitly set initial state */
+    transition: all 0.3s ease; /* Use 'all' instead of just 'transform' */
+    -webkit-transition: all 0.3s ease; /* Add webkit prefix */
+    -moz-transition: all 0.3s ease; /* Add mozilla prefix */
+    -o-transition: all 0.3s ease; /* Add opera prefix */
+    will-change: transform; /* Hint to browser to optimize */
 }
 
 .image-placeholder:hover {
     transform: scale(1.02);
-    /* No need for transition here anymore */
+    -webkit-transform: scale(1.02); /* Add webkit prefix */
 }
