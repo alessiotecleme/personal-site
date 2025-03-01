@@ -211,3 +211,7 @@ h1 .header-link + .header-link {
     transform: scale(1.02);
     -webkit-transform: scale(1.02);
 }
+
+h1 + p {
+    margin-top: 0px; /* Ensure no extra space is added from the paragraph */
+}
