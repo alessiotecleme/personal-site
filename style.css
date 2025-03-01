@@ -63,10 +63,19 @@ p + h4 {
 h4 {
     font-size: 16px;
     font-weight: 700;
-    margin: 0;
-    margin-top: 12px;
-    margin-bottom: 0px;
-    color: #333333;  /* Explicit color for h4 */
+    margin: 0; /* Reset all margins */
+    margin-bottom: 0px; /* Add a small bottom margin */
+    color: #333333;
+}
+
+/* Target consecutive h4 elements to reduce spacing between them */
+h4 + h4 {
+    margin-top: 8px; /* Reduced spacing between consecutive h4 elements */
+}
+
+/* If you want even less space, you can reduce this value further */
+h4 + h4 {
+    margin-top: 8px; /* Very tight spacing between consecutive h4 elements */
 }
 
 /* Make all links in h4 match the same color */
@@ -145,7 +154,7 @@ p a:hover {
 }
 
 .section {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 /* Responsive design */
