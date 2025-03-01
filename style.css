@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-text-size-adjust: 100%; /* Prevent font size adjustment */
 }
 
 body {
@@ -12,17 +11,11 @@ body {
     color: #333333;
     max-width: 54em;
     margin: 0 auto;
-    padding: 32px;
-    -webkit-font-smoothing: antialiased; /* Better text rendering on iOS */
-    -moz-osx-font-smoothing: grayscale;
-    /* Force Safari to behave */
-    text-rendering: optimizeLegibility;
+    padding: 0px;
 }
 
 .container {
-    padding: 0;
-    display: block;
-    width: 100%;
+    padding: 32px;
 }
 
 h1 {
@@ -31,8 +24,6 @@ h1 {
     font-weight: 400;  /* DM Serif Display only comes in regular weight */
     margin-bottom: 32px;
     color: #FF8800;  /* Orange color for name */
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
 }
 
     /* This is a CSS comment */
@@ -45,8 +36,6 @@ h2 {
     color: #666464;
     margin-top: -5px;     /* Controls spacing after h1 */
     margin-bottom: 32px;  /* Controls spacing before paragraph */
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
 }
 
 h3 {
@@ -59,8 +48,6 @@ h3 {
     margin: 0;
     margin-top: 48px;
     margin-bottom: 16px;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
 }
 
 /* Add specific spacing between h3 and the first h4 */
@@ -75,8 +62,6 @@ h4 {
     margin-bottom: 0px;
     line-height: 1.2;
     color: #333333;  /* Explicit color for h4 */
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
 }
 
 /* Make all links in h4 match the same color */
@@ -114,16 +99,12 @@ h4:not(:has(+ .subtitle)):not(:last-child) {
 }
 
 p {
-    margin-bottom: 16px; /* Paragraph spacing */
-    -webkit-margin-before: 0; /* Reset Safari's default margin */
-    -webkit-margin-after: 16px; /* Set Safari-specific margin */
-    display: block; /* Ensure block display */
+    margin-bottom: 16px; /* Change from 0px to 16px for paragraph spacing */
 }
 
 /* Add this to ensure the last paragraph in a section doesn't have extra space */
 p:last-child {
     margin-bottom: 0;
-    -webkit-margin-after: 0; /* Safari-specific reset for last paragraph */
 }
 
 /* Base link styles */
@@ -226,57 +207,4 @@ h1 .header-link + .header-link {
 .image-placeholder:hover {
     transform: scale(1.02);
     -webkit-transform: scale(1.02);
-}
-
-/* Additional fixes for iOS Safari */
-h1, h2, h3, h4, h5, h6 {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-}
-
-/* iOS Safari specific CSS reset */
-input,
-textarea,
-button,
-select,
-a {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-/* Prevent iOS text size adjust after orientation change */
-html {
-    -webkit-text-size-adjust: 100%;
-}
-
-/* Safari-specific fixes using @supports */
-@supports (-webkit-touch-callout: none) {
-    /* CSS specific to iOS devices */
-    body {
-        /* Ensure consistent rendering on iOS Safari */
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    p {
-        /* Force paragraph margins to be exact in Safari */
-        margin: 0 0 16px 0 !important;
-        padding: 0 !important;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        /* Reset all heading margins in Safari */
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    /* Re-apply specific margins needed for layout */
-    h1 { margin-bottom: 32px !important; }
-    h2 { margin-top: -5px !important; margin-bottom: 32px !important; }
-    h3 { margin-top: 48px !important; margin-bottom: 16px !important; }
-    h4 + .subtitle { margin-top: 8px !important; }
-}
-
-/* Fix for Safari's handling of :last-child */
-p:last-of-type {
-    margin-bottom: 0 !important;
-    -webkit-margin-after: 0 !important;
 }
