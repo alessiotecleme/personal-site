@@ -12,7 +12,7 @@ body {
     color: #333333;
     max-width: 54em;
     margin: 0 auto;
-    padding: 0px;
+    padding: 32px;
     -webkit-font-smoothing: antialiased; /* Better text rendering on iOS */
     -moz-osx-font-smoothing: grayscale;
 }
