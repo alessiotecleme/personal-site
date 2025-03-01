@@ -16,6 +16,9 @@ body {
 
 .container {
     padding: 32px;
+    display: block; /* Ensure block display */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 h1 {
