@@ -219,14 +219,16 @@ h1 + p {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('fonts/FoundersGrotesk-Regular.otf') format('opentype'); /* Regular font */
-    font-weight: normal; /* Regular weight */
-    font-style: normal;  /* Normal style */
+    src: url('fonts/FoundersGrotesk-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* This can help with font loading */
 }
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('fonts/FoundersGrotesk-Semibold.otf') format('opentype'); /* Semibold font */
-    font-weight: 600; /* Semibold weight */
-    font-style: normal;  /* Normal style */
+    src: url('fonts/FoundersGrotesk-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
