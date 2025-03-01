@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    padding: 20px;
+    padding: 0px 0px 0px 0px; /* 48px top, 20px right, 20px bottom, 20px left */
 }
 
 h1 {
@@ -25,6 +25,9 @@ h1 {
     margin-bottom: 32px;
     color: #FF8800;  /* Orange color for name */
 }
+
+    /* This is a CSS comment */
+    /* The code inside won't be executed */
 
 h2 {
     font-family: 'DM Serif Display', serif;
@@ -56,7 +59,7 @@ h4 {
     font-size: 16px;
     font-weight: 700;
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     line-height: 1.2;
     color: #333333;  /* Explicit color for h4 */
 }
@@ -96,7 +99,12 @@ h4:not(:has(+ .subtitle)):not(:last-child) {
 }
 
 p {
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Change from 0px to 16px for paragraph spacing */
+}
+
+/* Add this to ensure the last paragraph in a section doesn't have extra space */
+p:last-child {
+    margin-bottom: 0;
 }
 
 /* Base link styles */
