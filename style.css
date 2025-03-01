@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Space Mono', monospace !important;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #333333;
     max-width: 54em;
     margin: 0 auto;
@@ -63,7 +63,6 @@ h4 {
     font-weight: 700;
     margin: 0;
     margin-bottom: 0px;
-    line-height: 1.2;
     color: #333333;  /* Explicit color for h4 */
 }
 
