@@ -15,11 +15,14 @@ body {
     padding: 32px;
     -webkit-font-smoothing: antialiased; /* Better text rendering on iOS */
     -moz-osx-font-smoothing: grayscale;
+    /* Force Safari to behave */
+    text-rendering: optimizeLegibility;
 }
 
 .container {
-    padding: 0px 0px 0px 0px; /* 48px top, 20px right, 20px bottom, 20px left */
-    display: block; /* Ensure block display */
+    padding: 0;
+    display: block;
+    width: 100%;
 }
 
 h1 {
@@ -243,4 +246,37 @@ a {
 /* Prevent iOS text size adjust after orientation change */
 html {
     -webkit-text-size-adjust: 100%;
+}
+
+/* Safari-specific fixes using @supports */
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    body {
+        /* Ensure consistent rendering on iOS Safari */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    p {
+        /* Force paragraph margins to be exact in Safari */
+        margin: 0 0 16px 0 !important;
+        padding: 0 !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        /* Reset all heading margins in Safari */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Re-apply specific margins needed for layout */
+    h1 { margin-bottom: 32px !important; }
+    h2 { margin-top: -5px !important; margin-bottom: 32px !important; }
+    h3 { margin-top: 48px !important; margin-bottom: 16px !important; }
+    h4 + .subtitle { margin-top: 8px !important; }
+}
+
+/* Fix for Safari's handling of :last-child */
+p:last-of-type {
+    margin-bottom: 0 !important;
+    -webkit-margin-after: 0 !important;
 }
