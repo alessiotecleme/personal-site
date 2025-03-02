@@ -329,56 +329,29 @@ h1 + p {
     }
 }
 
-/* Browser-specific adjustments */
-/* Safari-specific - mobile padding (screens smaller than 768px) */
-@media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-        .container {
-            padding: 32px;
-            padding-top: 16px; /* Adjust this value for mobile Safari */
-        }
-    }
-}
+/* KEEP THESE NEW SECTIONS: */
 
-/* Safari-specific - desktop padding (screens larger than 768px) */
-@media screen and (min-width: 768px) {
-    @media not all and (min-resolution:.001dpcm) { 
-        @supports (-webkit-appearance:none) {
-            .container {
-                padding: 48px;
-                padding-top: 64px; /* Different value for desktop Safari */
-            }
-        }
-    }
-}
-
-/* Chrome/Arc-specific - increase top padding */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: 0.001dpcm) {
+/* iOS Safari specific */
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
     .container {
-        padding-top: 160px; /* Increased for Arc to match Safari */
+        padding: 32px !important;
+        padding-top: 32px !important;
     }
 }
 
-/* Responsive adjustments */
-@media screen and (min-width: 768px) {
+/* iOS Safari specific - alternative method */
+@media (hover: none) and (-webkit-min-device-pixel-ratio: 2) {
     .container {
-        padding: 48px;
+        padding: 32px !important;
+        padding-top: 16px !important;
     }
-    
-    /* Safari-specific for larger screens */
-    @media not all and (min-resolution:.001dpcm) { 
-        @supports (-webkit-appearance:none) {
-            .container {
-                padding-top: 64px; /* Adjusted for Safari on larger screens */
-            }
-        }
-    }
-    
-    /* Arc/Chrome-specific for larger screens */
-    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: 0.001dpcm) {
-        .container {
-            padding-top: 80px; /* Adjusted for Arc/Chrome on larger screens */
-        }
+}
+
+/* Base mobile style */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 32px;
+        padding-top: 16px;
     }
 }
 
@@ -392,18 +365,6 @@ h2, h3, h4, h5, h6, p, a:not(.header-link), span {
     .container {
         padding: 24px;
         padding-top: 16px; /* Adjust this value for iOS Safari */
-    }
-}
-
-/* Desktop Safari - desktop padding */
-@media screen and (min-width: 768px) {
-    @media not all and (min-resolution:.001dpcm) { 
-        @supports (-webkit-appearance:none) {
-            .container {
-                padding: 48px;
-                padding-top: 64px; /* Desktop Safari padding */
-            }
-        }
     }
 }
 
