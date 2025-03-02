@@ -390,7 +390,7 @@ h2, h3, h4, h5, h6, p, a:not(.header-link), span {
 /* iOS Safari - mobile padding */
 @supports (-webkit-touch-callout: none) {
     .container {
-        padding: 32px;
+        padding: 24px;
         padding-top: 16px; /* Adjust this value for iOS Safari */
     }
 }
