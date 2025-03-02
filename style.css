@@ -364,7 +364,7 @@ h1 + p {
     /* Arc/Chrome-specific for larger screens */
     @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: 0.001dpcm) {
         .container {
-            padding-top: 96px; /* Adjusted for Arc/Chrome on larger screens */
+            padding-top: 80px; /* Adjusted for Arc/Chrome on larger screens */
         }
     }
 }
