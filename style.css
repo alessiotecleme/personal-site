@@ -23,9 +23,9 @@ body {
 }
 
 h1 {
-    font-family: 'Founders Grotesk'; /* Use the regular font */
+    font-family: 'DM Serif Display', serif; /* Changed from 'Founders Grotesk' to 'DM Serif Display' */
     font-size: 32px;
-    font-weight: normal; /* Regular weight */
+    font-weight: 400;  /* DM Serif Display only comes in regular weight */
     margin-bottom: 32px;
     color: #FF8800;  /* Orange color for name */
 }
