@@ -193,13 +193,12 @@ p a:hover {
     text-decoration: none;
 }
 
-h1.header-link, 
+h1 .header-link, 
 h1 a.header-link {
-    font-family: 'DM Serif Display', serif !important;
     color: #FF8800 !important;  /* Match h1 color with !important */
 }
 
-h1.header-link:hover {
+h1 .header-link:hover {
     color: #FF8800 !important;  /* Keep orange on hover */
 }
 
