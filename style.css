@@ -305,7 +305,7 @@ h1 + p {
 @supports (-webkit-touch-callout: none) {
     .container {
         padding: 32px !important;
-        padding-top: 80px !important;
+        padding-top: 76px !important;
     }
 }
 
@@ -313,7 +313,7 @@ h1 + p {
 @media screen and (max-width: 767px) {
     .container {
         padding: 32px;
-        padding-top: 80px;
+        padding-top: 76px;
     }
 }
 
