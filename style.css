@@ -23,21 +23,27 @@ body {
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
+/* Regular text elements use Founders Grotesk */
+h2, h3, h4, h5, h6, p, a, span {
+    font-family: 'Founders Grotesk', sans-serif !important;
+}
+
+/* Specifically target h1 for DM Serif Display */
+h1 {
+    font-family: 'DM Serif Display', serif !important;
+    font-weight: normal !important;
+    color: #FF8C00 !important;
+}
+
 h1, h1 * {
-    font-family: 'DM Serif Display', serif !important; /* Use DM Serif Display */
     font-size: 32px;
     font-weight: 400; /* DM Serif Display typically only comes in regular weight */
     margin-bottom: 32px;
     padding-bottom: 0px;
-    color: #FF8800;
     /* Add these properties for better cross-browser consistency */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 0; /* Prevent browser-specific letter-spacing differences */
-}
-
-h2, h3, h4, h5, h6, p, a, span, div {
-    font-family: 'Founders Grotesk', sans-serif !important;
 }
 
 h2 {
@@ -193,9 +199,12 @@ p a:hover {
     text-decoration: none;
 }
 
-h1 .header-link, 
-h1 a.header-link {
-    color: #FF8800 !important;  /* Match h1 color with !important */
+h1 .header-link,
+h1 a,
+.header-link {
+    font-family: 'DM Serif Display', serif !important;
+    color: #FF8C00 !important;
+    text-decoration: none !important;
 }
 
 h1 .header-link:hover {
@@ -274,9 +283,8 @@ h1 + p {
 /* Ensure fonts load properly across browsers */
 @font-face {
     font-family: 'DM Serif Display';
-    src: local('DM Serif Display'),
-         url('https://fonts.gstatic.com/s/dmserifdisplay/v5/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype');
-    font-weight: 400;
+    src: url('fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -359,4 +367,9 @@ h1 + p {
             padding-top: 96px; /* Adjusted for Arc/Chrome on larger screens */
         }
     }
+}
+
+/* Other text elements remain in Founders Grotesk */
+h2, h3, h4, h5, h6, p, a:not(.header-link), span {
+    font-family: 'Founders Grotesk', sans-serif !important;
 }
