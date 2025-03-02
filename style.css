@@ -348,7 +348,7 @@ h1 + p {
     @media not all and (min-resolution:.001dpcm) { 
         @supports (-webkit-appearance:none) {
             .container {
-                padding-top: 80px; /* Adjusted for Safari on larger screens */
+                padding-top: 64px; /* Adjusted for Safari on larger screens */
             }
         }
     }
