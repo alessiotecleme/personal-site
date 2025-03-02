@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Founders Grotesk', sans-serif; /* Ensure fallback font */
+    font-family: 'Founders Grotesk', sans-serif !important; /* Set Founders Grotesk as default font */
     line-height: 1.6;
     color: #333333;
     max-width: 52em; /* Make sure this is consistent */
@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'DM Serif Display', serif !important; /* Only h1 uses DM Serif */
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 32px;
@@ -35,8 +35,11 @@ h1 {
     letter-spacing: 0; /* Prevent browser-specific letter-spacing differences */
 }
 
+h2, h3, h4, h5, h6, p, a, span, div {
+    font-family: 'Founders Grotesk', sans-serif !important;
+}
+
 h2 {
-    font-family: 'Founders Grotesk'; /* Use the semibold font */
     font-size: 16px;
     font-weight: 600; /* Semibold weight */
     color: #666464;
@@ -45,10 +48,10 @@ h2 {
 }
 
 h3 {
-    font-family: 'Founders Grotesk'; /* Force font with fallback */
+    font-family: 'Founders Grotesk', sans-serif !important; /* Force Founders Grotesk */
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 600 !important; /* Force font weight */
+    font-weight: 600 !important;
     letter-spacing: 4px;
     color: #FF8800;
     margin: 0;
@@ -74,12 +77,13 @@ p + h4 {
 }
 
 h4 {
+    font-family: 'Founders Grotesk', sans-serif !important; /* Force Founders Grotesk */
     font-size: 16px;
-    font-weight: 600;
-    margin: 0; /* Reset all margins */
-    margin-bottom: 0px; /* No bottom margin */
+    font-weight: 600 !important;
+    margin: 0;
+    margin-bottom: 0px;
+    line-height: 1.5;
     color: #333333;
-    line-height: 1.5; /* 24px ÷ 16px = 1.5 */
 }
 
 /* Target consecutive h4 elements to reduce spacing between them */
@@ -109,12 +113,13 @@ h4:not(a), h4 > a {
 }
 
 .subtitle {
+    font-family: 'Founders Grotesk', sans-serif !important; /* Force Founders Grotesk */
     color: #666464;
     font-size: 16px;
     margin: 0;
-    margin-top: 8px;    /* Much smaller negative margin */
+    margin-top: 8px;
     margin-bottom: 24px;
-    line-height: 1.2;  /* Match line height */
+    line-height: 1.5;
 }
 
 /* Extra specific rules to ensure consistent spacing */
@@ -127,6 +132,7 @@ h4:not(:has(+ .subtitle)):not(:last-child) {
 }
 
 p {
+    font-family: 'Founders Grotesk', sans-serif !important; /* Force Founders Grotesk */
     margin-bottom: 16px;
     max-width: 100%; /* Ensure paragraphs don't exceed container width */
     word-wrap: break-word; /* Handle long words */
