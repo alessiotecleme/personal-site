@@ -45,23 +45,20 @@ h2 {
 }
 
 h3 {
-    font-family: 'Founders Grotesk'; /* Use the regular font */
+    font-family: 'Founders Grotesk', sans-serif !important; /* Force font with fallback */
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 4px;  /* Add space between letters */
-    color: #FF8800;  /* Match h1 color */
+    font-weight: 600 !important; /* Force font weight */
+    letter-spacing: 4px;
+    color: #FF8800;
     margin: 0;
     margin-top: 48px;
     margin-bottom: 16px;
-    /* Add these properties for better cross-browser consistency */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Force hardware acceleration for text rendering */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    /* Ensure consistent text rendering */
-    text-rendering: optimizeLegibility;
+    padding: 0;
+    display: block; /* Ensure block display */
+    line-height: 1.2; /* Control line height */
 }
 
 /* Add specific spacing between h3 and the first h4 */
@@ -311,5 +308,26 @@ h1 + p {
     /* Firefox specific adjustments */
     h1 {
         margin-bottom: 24px; /* Match your desired spacing */
+    }
+}
+
+/* Arc/Chrome specific fixes */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: 0.001dpcm) {
+    h3 {
+        letter-spacing: 3.5px !important; /* Adjusted for Chrome/Arc */
+        font-weight: 600 !important;
+        font-size: 13.8px; /* Slightly smaller to match Safari rendering */
+        transform: scale(1.01, 1); /* Subtle horizontal stretch */
+        transform-origin: left center;
+    }
+}
+
+/* Safari specific fixes */
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        h3 {
+            letter-spacing: 4px !important;
+            font-weight: 600 !important;
+        }
     }
 }
