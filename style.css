@@ -54,6 +54,14 @@ h3 {
     margin: 0;
     margin-top: 48px;
     margin-bottom: 16px;
+    /* Add these properties for better cross-browser consistency */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Force hardware acceleration for text rendering */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    /* Ensure consistent text rendering */
+    text-rendering: optimizeLegibility;
 }
 
 /* Add specific spacing between h3 and the first h4 */
@@ -282,6 +290,12 @@ h1 + p {
     /* Fix for the first paragraph after h1 */
     h1 + p {
         margin-top: 0;
+    }
+
+    h3 {
+        /* Fine-tune for Chromium browsers */
+        letter-spacing: 3.8px; /* Slightly adjust letter spacing for Chrome/Arc */
+        padding-bottom: 1px; /* Subtle adjustment for Chrome/Arc */
     }
 }
 
