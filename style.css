@@ -45,12 +45,12 @@ h2 {
 }
 
 h3 {
-    font-family: 'Founders Grotesk'; /* Use the regular font */
+    font-family: 'Founders Grotesk'; /* Force font with fallback */
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 4px;  /* Add space between letters */
-    color: #FF8800;  /* Match h1 color */
+    font-weight: 600 !important; /* Force font weight */
+    letter-spacing: 4px;
+    color: #FF8800;
     margin: 0;
     margin-top: 48px;
     margin-bottom: 16px;
@@ -245,16 +245,16 @@ h1 + p {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('fonts/FoundersGrotesk-Regular.otf') format('opentype');
-    font-weight: normal;
+    src: url('fonts/FoundersGrotesk-Semibold.otf') format('opentype');
+    font-weight: 600;
     font-style: normal;
-    font-display: swap; /* This can help with font loading */
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('fonts/FoundersGrotesk-Semibold.otf') format('opentype');
-    font-weight: 600;
+    src: url('fonts/FoundersGrotesk-Regular.otf') format('opentype');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
