@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Founders Grotesk', sans-serif !important;
 }
 
 body {
@@ -22,8 +23,8 @@ body {
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
-h1 {
-    font-family: 'DM Serif Display', serif !important; /* Only h1 uses DM Serif */
+h1, h1 * {
+    font-family: 'DM Serif Display', serif !important;
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 32px;
@@ -251,7 +252,7 @@ h1 + p {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('fonts/FoundersGrotesk-Semibold.otf') format('opentype');
+    src: url('/fonts/FoundersGrotesk-Semibold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
