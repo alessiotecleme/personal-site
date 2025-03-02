@@ -37,8 +37,8 @@ h1 {
 
 h1, h1 * {
     font-size: 32px;
-    font-weight: 400; /* DM Serif Display typically only comes in regular weight */
-    margin-bottom: 32px;
+    font-weight: 400;
+    margin-bottom: 16px;  /* Reduced from 32px to create tighter spacing */
     padding-bottom: 0px;
     /* Add these properties for better cross-browser consistency */
     -webkit-font-smoothing: antialiased;
@@ -255,8 +255,9 @@ h1 .header-link + .header-link {
     -webkit-transform: scale(1.02);
 }
 
+/* Ensure consistent spacing after h1 */
 h1 + p {
-    margin-top: 0px; /* Ensure no extra space is added from the paragraph */
+    margin-top: 0;  /* Remove any top margin from paragraph */
 }
 
 @font-face {
