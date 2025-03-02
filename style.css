@@ -320,3 +320,43 @@ h1 + p {
         margin-bottom: 24px; /* Match your desired spacing */
     }
 }
+
+/* Browser-specific adjustments */
+/* Safari-specific - reduce top padding */
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .container {
+            padding-top: 80px; /* Reduced for Safari */
+        }
+    }
+}
+
+/* Chrome/Arc-specific - increase top padding */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: 0.001dpcm) {
+    .container {
+        padding-top: 160px; /* Increased for Arc to match Safari */
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 48px;
+    }
+    
+    /* Safari-specific for larger screens */
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance:none) {
+            .container {
+                padding-top: 100px; /* Adjusted for Safari on larger screens */
+            }
+        }
+    }
+    
+    /* Arc/Chrome-specific for larger screens */
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: 0.001dpcm) {
+        .container {
+            padding-top: 96px; /* Adjusted for Arc/Chrome on larger screens */
+        }
+    }
+}
