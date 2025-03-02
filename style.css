@@ -23,11 +23,15 @@ body {
 }
 
 h1 {
-    font-family: 'DM Serif Display', serif; /* Changed from 'Founders Grotesk' to 'DM Serif Display' */
+    font-family: 'DM Serif Display', serif;
     font-size: 32px;
-    font-weight: 400;  /* DM Serif Display only comes in regular weight */
+    font-weight: 400;
     margin-bottom: 32px;
-    color: #FF8800;  /* Orange color for name */
+    color: #FF8800;
+    /* Add these properties for better cross-browser consistency */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0; /* Prevent browser-specific letter-spacing differences */
 }
 
 h2 {
@@ -249,4 +253,33 @@ h1 + p {
 .no-padding {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+}
+
+/* Ensure fonts load properly across browsers */
+@font-face {
+    font-family: 'DM Serif Display';
+    src: local('DM Serif Display'),
+         url('https://fonts.gstatic.com/s/dmserifdisplay/v5/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Specific fixes for Chromium-based browsers like Arc */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    h1 {
+        /* Fine-tune for Chromium browsers */
+        padding-bottom: 2px; /* Subtle adjustment for Chrome/Arc */
+    }
+    
+    /* Ensure consistent paragraph spacing */
+    p {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    
+    /* Fix for the first paragraph after h1 */
+    h1 + p {
+        margin-top: 0;
+    }
 }
