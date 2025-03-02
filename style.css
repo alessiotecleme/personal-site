@@ -292,103 +292,32 @@ h1 + p {
 /* Specific fixes for Chromium-based browsers like Arc */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     h1 {
-        /* Fine-tune for Chromium browsers */
-        padding-bottom: 2px; /* Subtle adjustment for Chrome/Arc */
+        padding-bottom: 2px;
     }
     
-    /* Ensure consistent paragraph spacing */
-    p {
-        margin-top: 0;
-        margin-bottom: 16px;
-    }
-    
-    /* Fix for the first paragraph after h1 */
-    h1 + p {
-        margin-top: 0;
-    }
-
     h3 {
-        /* Fine-tune for Chromium browsers */
-        letter-spacing: 3.8px; /* Slightly adjust letter spacing for Chrome/Arc */
-        padding-bottom: 1px; /* Subtle adjustment for Chrome/Arc */
+        letter-spacing: 3.8px;
+        padding-bottom: 1px;
     }
 }
-
-/* Specific fixes for different browsers */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    /* Chrome/Safari/Arc specific adjustments */
-    h1 {
-        margin-bottom: 24px; /* Match your desired spacing */
-    }
-}
-
-@media screen and (min--moz-device-pixel-ratio:0) {
-    /* Firefox specific adjustments */
-    h1 {
-        margin-bottom: 24px; /* Match your desired spacing */
-    }
-}
-
-/* KEEP THESE NEW SECTIONS: */
 
 /* iOS Safari specific */
-@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+@supports (-webkit-touch-callout: none) {
     .container {
         padding: 32px !important;
-        padding-top: 32px !important;
+        padding-top: 24px !important;
     }
 }
 
-/* iOS Safari specific - alternative method */
-@media (hover: none) and (-webkit-min-device-pixel-ratio: 2) {
-    .container {
-        padding: 32px !important;
-        padding-top: 16px !important;
-    }
-}
-
-/* Base mobile style */
+/* Base mobile style for all other browsers */
 @media screen and (max-width: 767px) {
     .container {
         padding: 32px;
-        padding-top: 16px;
+        padding-top: 64px;
     }
 }
 
 /* Other text elements remain in Founders Grotesk */
 h2, h3, h4, h5, h6, p, a:not(.header-link), span {
     font-family: 'Founders Grotesk', sans-serif !important;
-}
-
-/* iOS Safari - mobile padding */
-@supports (-webkit-touch-callout: none) {
-    .container {
-        padding: 24px;
-        padding-top: 16px; /* Adjust this value for iOS Safari */
-    }
-}
-
-/* iOS Safari specific */
-@supports (-webkit-touch-callout: none) and (not (translate: none)) {
-    .container {
-        padding: 32px !important;
-        padding-top: 32px !important; /* Smaller top padding for iOS */
-    }
-}
-
-/* iOS Safari specific - alternative method */
-@media (hover: none) and (-webkit-min-device-pixel-ratio: 2) {
-    .container {
-        padding: 32px !important;
-        padding-top: 16px !important;
-    }
-}
-
-/* Remove or comment out the previous Safari-specific media queries */
-/* And add this base mobile style */
-@media screen and (max-width: 767px) {
-    .container {
-        padding: 32px;
-        padding-top: 16px;
-    }
 }
