@@ -411,7 +411,7 @@ h2, h3, h4, h5, h6, p, a:not(.header-link), span {
 @supports (-webkit-touch-callout: none) and (not (translate: none)) {
     .container {
         padding: 32px !important;
-        padding-top: 16px !important; /* Smaller top padding for iOS */
+        padding-top: 32px !important; /* Smaller top padding for iOS */
     }
 }
 
