@@ -330,11 +330,24 @@ h1 + p {
 }
 
 /* Browser-specific adjustments */
-/* Safari-specific - reduce top padding */
+/* Safari-specific - mobile padding (screens smaller than 768px) */
 @media not all and (min-resolution:.001dpcm) { 
     @supports (-webkit-appearance:none) {
         .container {
-            padding-top: 80px; /* Reduced for Safari */
+            padding: 32px;
+            padding-top: 32px; /* Adjust this value for mobile Safari */
+        }
+    }
+}
+
+/* Safari-specific - desktop padding (screens larger than 768px) */
+@media screen and (min-width: 768px) {
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance:none) {
+            .container {
+                padding: 48px;
+                padding-top: 64px; /* Different value for desktop Safari */
+            }
         }
     }
 }
