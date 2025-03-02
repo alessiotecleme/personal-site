@@ -27,6 +27,7 @@ h1 {
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 32px;
+    padding-bottom: 0px;
     color: #FF8800;
     /* Add these properties for better cross-browser consistency */
     -webkit-font-smoothing: antialiased;
@@ -281,5 +282,20 @@ h1 + p {
     /* Fix for the first paragraph after h1 */
     h1 + p {
         margin-top: 0;
+    }
+}
+
+/* Specific fixes for different browsers */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Chrome/Safari/Arc specific adjustments */
+    h1 {
+        margin-bottom: 24px; /* Match your desired spacing */
+    }
+}
+
+@media screen and (min--moz-device-pixel-ratio:0) {
+    /* Firefox specific adjustments */
+    h1 {
+        margin-bottom: 24px; /* Match your desired spacing */
     }
 }
