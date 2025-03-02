@@ -406,3 +406,28 @@ h2, h3, h4, h5, h6, p, a:not(.header-link), span {
         }
     }
 }
+
+/* iOS Safari specific */
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    .container {
+        padding: 32px !important;
+        padding-top: 16px !important; /* Smaller top padding for iOS */
+    }
+}
+
+/* iOS Safari specific - alternative method */
+@media (hover: none) and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        padding: 32px !important;
+        padding-top: 16px !important;
+    }
+}
+
+/* Remove or comment out the previous Safari-specific media queries */
+/* And add this base mobile style */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 32px;
+        padding-top: 16px;
+    }
+}
