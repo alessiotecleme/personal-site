@@ -45,20 +45,16 @@ h2 {
 }
 
 h3 {
-    font-family: 'Founders Grotesk', sans-serif !important; /* Force font with fallback */
+    /* Use a system font stack instead of Founders Grotesk */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 600 !important; /* Force font weight */
+    font-weight: 600;
     letter-spacing: 4px;
     color: #FF8800;
     margin: 0;
     margin-top: 48px;
     margin-bottom: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding: 0;
-    display: block; /* Ensure block display */
-    line-height: 1.2; /* Control line height */
 }
 
 /* Add specific spacing between h3 and the first h4 */
