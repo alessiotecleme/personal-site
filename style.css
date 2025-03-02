@@ -386,3 +386,23 @@ h1 + p {
 h2, h3, h4, h5, h6, p, a:not(.header-link), span {
     font-family: 'Founders Grotesk', sans-serif !important;
 }
+
+/* iOS Safari - mobile padding */
+@supports (-webkit-touch-callout: none) {
+    .container {
+        padding: 32px;
+        padding-top: 16px; /* Adjust this value for iOS Safari */
+    }
+}
+
+/* Desktop Safari - desktop padding */
+@media screen and (min-width: 768px) {
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance:none) {
+            .container {
+                padding: 48px;
+                padding-top: 64px; /* Desktop Safari padding */
+            }
+        }
+    }
+}
