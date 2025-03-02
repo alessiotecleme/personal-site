@@ -99,9 +99,9 @@ h4:not(a), h4 > a {
     color: #666464;
     font-size: 16px;
     margin: 0;
-    margin-top: 8px;    /* Space after h4 */
-    margin-bottom: 24px; /* Space before next element */
-    line-height: 1.5;  /* Match h4 line height */
+    margin-top: 8px;    /* Much smaller negative margin */
+    margin-bottom: 24px;
+    line-height: 1.2;  /* Match line height */
 }
 
 /* Extra specific rules to ensure consistent spacing */
@@ -110,7 +110,7 @@ h4 + .subtitle {
 }
 
 h4:not(:has(+ .subtitle)):not(:last-child) {
-    margin-bottom: 24px;  /* Controls spacing between standalone h4s */
+    margin-bottom: 16px;  /* Controls spacing between standalone h4s */
 }
 
 p {
@@ -244,4 +244,9 @@ h1 + p {
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+}
+
+.no-padding {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
