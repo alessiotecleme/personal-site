@@ -335,7 +335,7 @@ h1 + p {
     @supports (-webkit-appearance:none) {
         .container {
             padding: 32px;
-            padding-top: 32px; /* Adjust this value for mobile Safari */
+            padding-top: 16px; /* Adjust this value for mobile Safari */
         }
     }
 }
