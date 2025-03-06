@@ -157,10 +157,29 @@ a {
     font-weight: 600 !important;
     border-bottom: none !important;
     -webkit-text-decoration: none !important;  /* Safari-specific */
+    position: relative; /* For the animated underline */
+}
+
+/* Animated underline effect */
+a:not(.header-link):after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF8800; /* Orange underline color */
+    transition: width 150ms ease-out; /* Exit transition (disappearing) */
+    -webkit-transition: width 150ms ease-out;
+}
+
+a:not(.header-link):hover:after {
+    width: 100%;
+    transition: width 200ms ease-in; /* Enter transition (appearing) - slower */
+    -webkit-transition: width 200ms ease-in;
 }
 
 a:hover {
-    border-bottom: none !important;
     color: #FF8800;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;  /* Safari-specific */
