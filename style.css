@@ -157,32 +157,22 @@ a {
     font-weight: 600 !important;
     border-bottom: none !important;
     -webkit-text-decoration: none !important;  /* Safari-specific */
-    position: relative; /* For the animated underline */
+    position: relative; /* Keep this for potential future effects */
+    transition: color 250ms ease-out; /* Exit transition (color returning to normal) */
+    -webkit-transition: color 250ms ease-out;
 }
 
-/* Animated underline effect */
+/* Remove the underline effect */
 a:not(.header-link):after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #FF8800; /* Orange underline color */
-    transition: width 250ms ease-out; /* Exit transition (disappearing) */
-    -webkit-transition: width 250ms ease-out;
-}
-
-a:not(.header-link):hover:after {
-    width: 100%;
-    transition: width 0ms ease-in; /* Enter transition (appearing) - slower */
-    -webkit-transition: width 0ms ease-in;
+    content: none; /* Remove the underline pseudo-element */
 }
 
 a:hover {
     color: #FF8800;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;  /* Safari-specific */
+    transition: color 0ms ease-in; /* Instant color change on hover */
+    -webkit-transition: color 0ms ease-in;
 }
 
 /* Extra specific rules for links in paragraphs */
@@ -191,12 +181,16 @@ p a, p a:link, p a:visited {
     font-weight: 600 !important;
     border-bottom: none !important;
     -webkit-text-decoration: none !important;  /* Safari-specific */
+    transition: color 250ms ease-out; /* Exit transition */
+    -webkit-transition: color 250ms ease-out;
 }
 
 p a:hover {
     border-bottom: none !important;
     text-decoration: none !important;
     -webkit-text-decoration: none !important;  /* Safari-specific */
+    transition: color 0ms ease-in; /* Instant color change on hover */
+    -webkit-transition: color 0ms ease-in;
 }
 
 .section {
