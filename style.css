@@ -46,13 +46,16 @@ h1, h1 * {
     letter-spacing: 0; /* Prevent browser-specific letter-spacing differences */
 }
 
-/* Consistent h2 spacing */
+/* Consistent h2 styling to match body text */
 h2 {
     font-size: 16px;
-    font-weight: 600; /* Semibold weight */
-    color: #666464;
-    margin-top: 32px;     /* Consistent top margin for all h2 elements */
-    margin-bottom: 8px !important;  /* Force consistent bottom margin with !important */
+    font-weight: normal !important; /* Force normal weight with !important */
+    color: #333333;
+    margin-top: 32px;
+    margin-bottom: 8px !important;
+    /* Add these properties to ensure consistent rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* First h2 after h4 might need special treatment */
@@ -385,7 +388,7 @@ p:has(+ .image-placeholder) {
 /* h5 styling - same as h4 but with 20px font size */
 h5 {
     font-family: 'Founders Grotesk', sans-serif !important;
-    font-size: 20px; /* Increased from 16px to 20px */
+    font-size: 16px; /* Increased from 16px to 20px */
     font-weight: 600 !important;
     margin: 0;
     margin-bottom: 0px;
@@ -423,9 +426,9 @@ h5:not(:has(+ .subtitle)):not(:last-child) {
     margin-bottom: 16px;
 }
 
-/* Reduce spacing between h5 and h2 */
+/* Increase spacing between h5 and h2 */
 h5 + h2 {
-    margin-top: 16px !important; /* Reduced from 32px to 16px */
+    margin-top: 24px !important; /* Increased from 16px to 24px */
 }
 
 /* iOS Safari specific typography adjustments */
@@ -477,4 +480,9 @@ h1 + h5 {
         height: 320px !important;  /* Ensure iOS Safari gets the reduced height */
         padding: 16px 32px !important;
     }
+}
+
+/* Ensure h2 links also have normal weight */
+h2 a, h2 a:link, h2 a:visited {
+    font-weight: normal !important;
 }
