@@ -256,7 +256,7 @@ h1 .header-link + .header-link {
 
 .image-placeholder {
     width: 100%;          /* Full width of container */
-    height: 536px;        /* Fixed height as specified */
+    height: 536px;        /* Default height for desktop */
     border: 1px solid #D2D2D2;  /* Light gray border */
     border-radius: 8px;   /* Rounded corners */
     margin: 0px 0;      /* Default vertical spacing */
@@ -461,4 +461,20 @@ h5 + h2 {
 /* Add more spacing between h1 and h5 */
 h1 + h5 {
     margin-top: 32px !important; /* Increase this value for more space */
+}
+
+/* Add this: Mobile-specific adjustments for image placeholder */
+@media screen and (max-width: 767px) {
+    .image-placeholder {
+        height: 320px !important;  /* Reduced height for mobile */
+        padding: 16px 32px !important;  /* Smaller padding for mobile */
+    }
+}
+
+/* iOS Safari specific adjustments */
+@supports (-webkit-touch-callout: none) {
+    .image-placeholder {
+        height: 320px !important;  /* Ensure iOS Safari gets the reduced height */
+        padding: 16px 32px !important;
+    }
 }
