@@ -38,7 +38,7 @@ h1 {
 h1, h1 * {
     font-size: 32px;
     font-weight: 400;
-    margin-bottom: 16px;  /* Reduced from 32px to create tighter spacing */
+    margin-bottom: 32px;  /* Reduced from 32px to create tighter spacing */
     padding-bottom: 0px;
     /* Add these properties for better cross-browser consistency */
     -webkit-font-smoothing: antialiased;
@@ -81,7 +81,7 @@ h3 {
     letter-spacing: 4px;
     color: #FF8800;
     margin: 0;
-    margin-top: 48px;
+    margin-top: 64px;
     margin-bottom: 16px;
     /* Add these properties for better cross-browser consistency */
     -webkit-font-smoothing: antialiased;
@@ -463,7 +463,7 @@ h5 + h2 {
 
 /* Add more spacing between h1 and h5 */
 h1 + h5 {
-    margin-top: 48px !important; /* Increase this value for more space */
+    margin-top: 32px !important; /* Increase this value for more space */
 }
 
 /* Add this: Mobile-specific adjustments for image placeholder */
