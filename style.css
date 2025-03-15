@@ -101,7 +101,7 @@ p + h4 {
 
 h4 {
     font-family: 'Founders Grotesk', sans-serif !important; /* Force Founders Grotesk */
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600 !important;
     margin: 0;
     margin-bottom: 0px;
@@ -380,4 +380,50 @@ p:has(+ .image-placeholder) {
     margin-bottom: 24px;
     font-weight: normal;
     font-style: normal;
+}
+
+/* h5 styling - same as h4 but with 20px font size */
+h5 {
+    font-family: 'Founders Grotesk', sans-serif !important;
+    font-size: 20px; /* Increased from 16px to 20px */
+    font-weight: 600 !important;
+    margin: 0;
+    margin-bottom: 0px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+/* Target consecutive h5 elements to reduce spacing between them */
+h5 + h5 {
+    margin-top: 8px;
+}
+
+/* Make all links in h5 match the same color */
+h5 a, h5 a:link, h5 a:visited {
+    color: #333333 !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+}
+
+h5 a:hover {
+    color: #FF8800 !important;
+}
+
+/* Extra specific rules to ensure color consistency */
+h5:not(a), h5 > a {
+    color: #333333 !important;
+}
+
+/* Extra specific rules to ensure consistent spacing */
+h5 + .subtitle {
+    margin-top: 8px;
+}
+
+h5:not(:has(+ .subtitle)):not(:last-child) {
+    margin-bottom: 16px;
+}
+
+/* Reduce spacing between h5 and h2 */
+h5 + h2 {
+    margin-top: 16px !important; /* Reduced from 32px to 16px */
 }
