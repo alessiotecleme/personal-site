@@ -336,11 +336,45 @@ h1 + p {
     }
 }
 
-/* iOS Safari specific */
+/* Super specific iOS Safari targeting */
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        .container {
+            padding: 32px !important;
+            padding-top: 64px !important;
+            padding-bottom: 64px !important;
+        }
+        
+        /* Force all other important spacing rules for iOS */
+        h1, h1 * {
+            margin-bottom: 24px !important;
+        }
+        
+        h3 {
+            margin-top: 40px !important;
+        }
+        
+        p + h2 {
+            margin-top: 40px !important;
+        }
+        
+        h4 + p {
+            margin-top: 8px !important;
+        }
+    }
+}
+
+/* Alternative iOS Safari detection that works on older versions */
 @supports (-webkit-touch-callout: none) {
+    html, body {
+        /* Force a style change to break the cache */
+        -webkit-text-size-adjust: 100% !important;
+    }
+    
     .container {
         padding: 32px !important;
         padding-top: 64px !important;
+        padding-bottom: 64px !important;
     }
 }
 
