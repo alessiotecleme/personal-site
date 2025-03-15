@@ -49,10 +49,10 @@ h1, h1 * {
 /* Consistent h2 styling to match body text */
 h2 {
     font-size: 16px;
-    font-weight: 600 !important; /* Force normal weight with !important */
+    font-weight: 600 !important;
     color: #333333;
     margin-top: 32px;
-    margin-bottom: 16px !important;
+    margin-bottom: 16px !important; /* Fixed the missing value */
     /* Add these properties to ensure consistent rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -63,9 +63,9 @@ h4 + h2 {
     margin-top: 24px;     /* Slightly less space when h2 follows h4 */
 }
 
-/* Ensure consistent spacing between h2 and paragraphs */
-h2 + p {
-    margin-top: 0 !important;  /* Force remove any top margin from paragraphs after h2 */
+/* Control spacing between paragraphs and following h2 elements */
+p + h2 {
+    margin-top: 32px !important; /* Adjust this value to control spacing */
 }
 
 /* Target the specific Problem h2 to match Overview spacing */
