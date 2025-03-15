@@ -65,7 +65,7 @@ h4 + h2 {
 
 /* Control spacing between paragraphs and following h2 elements */
 p + h2 {
-    margin-top: 32px !important; /* Adjust this value to control spacing */
+    margin-top: 40px !important; /* Adjust this value to control spacing */
 }
 
 /* Target the specific Problem h2 to match Overview spacing */
