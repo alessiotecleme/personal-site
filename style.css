@@ -46,12 +46,28 @@ h1, h1 * {
     letter-spacing: 0; /* Prevent browser-specific letter-spacing differences */
 }
 
+/* Consistent h2 spacing */
 h2 {
     font-size: 16px;
     font-weight: 600; /* Semibold weight */
     color: #666464;
-    margin-top: -5px;     /* Controls spacing after h1 */
-    margin-bottom: 32px;  /* Controls spacing before paragraph */
+    margin-top: 32px;     /* Consistent top margin for all h2 elements */
+    margin-bottom: 8px !important;  /* Force consistent bottom margin with !important */
+}
+
+/* First h2 after h4 might need special treatment */
+h4 + h2 {
+    margin-top: 24px;     /* Slightly less space when h2 follows h4 */
+}
+
+/* Ensure consistent spacing between h2 and paragraphs */
+h2 + p {
+    margin-top: 0 !important;  /* Force remove any top margin from paragraphs after h2 */
+}
+
+/* Target the specific Problem h2 to match Overview spacing */
+h2:contains("Problem"), h2:contains("problem") {
+    margin-bottom: 16px !important;  /* Force the same spacing as Overview */
 }
 
 h3 {
@@ -85,7 +101,7 @@ p + h4 {
 
 h4 {
     font-family: 'Founders Grotesk', sans-serif !important; /* Force Founders Grotesk */
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600 !important;
     margin: 0;
     margin-bottom: 0px;
@@ -243,7 +259,7 @@ h1 .header-link + .header-link {
     height: 536px;        /* Fixed height as specified */
     border: 1px solid #D2D2D2;  /* Light gray border */
     border-radius: 8px;   /* Rounded corners */
-    margin: 24px 0;      /* Add some vertical spacing */
+    margin: 0px 0;      /* Default vertical spacing */
     background-color: #FCFCFC;  /* Light gray fill */
     transform: scale(1);  /* Explicitly set initial state */
     transition: all 0.3s ease; /* Use 'all' instead of just 'transform' */
@@ -254,6 +270,8 @@ h1 .header-link + .header-link {
     justify-content: center; /* Horizontally center */
     padding: 32px 80px; /* 20px top/bottom, 30px left/right */
     box-sizing: border-box; /* Make sure padding is included in width/height */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .image-placeholder img {
@@ -334,4 +352,32 @@ h1 + p {
 /* Other text elements remain in Founders Grotesk */
 h2, h3, h4, h5, h6, p, a:not(.header-link), span {
     font-family: 'Founders Grotesk', sans-serif !important;
+}
+
+/* Add this specific rule for h2 elements that aren't directly after h1 */
+h4 + h2, p + h2, div + h2 {
+    margin-top: 24px;     /* Add space above h2 when it follows other elements */
+    margin-bottom: 8px;  /* Controls spacing before paragraph */
+}
+
+/* Add this to your CSS file */
+p + .image-placeholder {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Remove bottom margin from paragraphs before image placeholders */
+p:has(+ .image-placeholder) {
+    margin-bottom: 24px !important;
+}
+
+/* Image caption styling */
+.image-caption {
+    text-align: center;
+    color: #666464;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-weight: normal;
+    font-style: normal;
 }
