@@ -71,7 +71,7 @@ h1 {
 h1, h1 * {
     font-size: 32px;
     font-weight: 400;
-    margin-bottom: 32px;  /* Reduced from 32px to create tighter spacing */
+    margin-bottom: 32px !important;
     padding-bottom: 0px;
     /* Add these properties for better cross-browser consistency */
     -webkit-font-smoothing: antialiased;
@@ -380,7 +380,7 @@ h1 + p {
         
         /* Force all other important spacing rules for iOS */
         h1, h1 * {
-            margin-bottom: 24px !important;
+            margin-bottom: 32px !important;
         }
         
         h3 {
@@ -606,13 +606,13 @@ body,
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     /* Chrome/Safari/Arc specific adjustments */
     h1 {
-        margin-bottom: 24px;
+        margin-bottom: 32px !important;
     }
 }
 
 @media screen and (min--moz-device-pixel-ratio:0) {
     /* Firefox specific adjustments */
     h1 {
-        margin-bottom: 24px;
+        margin-bottom: 32px !important;
     }
 }
