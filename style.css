@@ -8,14 +8,14 @@
 
 /* Add these rules at the top of your CSS file, right after the reset */
 html, body {
-    background-color: #FAFAFA !important; /* Force background color */
+    background-color: #FBFBFB !important; /* Force background color */
     min-height: 100vh; /* Ensure full viewport height */
 }
 
 /* iOS Safari specific fix */
 @supports (-webkit-touch-callout: none) {
     html, body {
-        background-color: #FAFAFA !important; /* Force background for iOS */
+        background-color: #FBFBFB !important; /* Force background for iOS */
         min-height: -webkit-fill-available; /* iOS viewport fix */
     }
 }
@@ -28,12 +28,12 @@ body {
     margin: 0 auto;
     padding: 0px;
     -webkit-text-size-adjust: 100%; /* Prevent text size adjustment */
-    background-color: #FAFAFA !important; /* Force background color */
+    background-color: #FBFBFB !important; /* Force background color */
 }
 
 /* If you want to ensure the entire viewport is colored, also add this to the html element */
 html {
-    background-color: #FAFAFA; /* Same color as body */
+    background-color: #FBFBFB; /* Same color as body */
 }
 
 .container {
@@ -283,7 +283,7 @@ h1 .header-link + .header-link {
     border: 1px solid #D2D2D2;  /* Light gray border */
     border-radius: 8px;   /* Rounded corners */
     margin: 0px 0;      /* Default vertical spacing */
-    background-color: #FCFCFC;  /* Light gray fill */
+    background-color: #FFFFFF;  /* Light gray fill */
     transform: scale(1);  /* Explicitly set initial state */
     transition: all 0.3s ease; /* Use 'all' instead of just 'transform' */
     -webkit-transition: all 0.3s ease;
