@@ -1,6 +1,6 @@
 /* Force background color at the very top of the CSS */
 :root {
-    background-color: #FFFFFF !important;
+    background-color: #FDFDFC !important;
 }
 
 /* Reset default styles */
@@ -13,7 +13,7 @@
 
 /* Add these rules at the top of your CSS file, right after the reset */
 html, body {
-    background-color: #FFFFFF !important;
+    background-color: #FDFDFC !important;
     min-height: 100% !important;
     height: 100% !important;
     font-family: 'Founders Grotesk', sans-serif !important;
@@ -22,7 +22,7 @@ html, body {
 /* iOS Safari specific fix */
 @supports (-webkit-touch-callout: none) {
     html, body, .container {
-        background-color: #FFFFFF !important;
+        background-color: #FDFDFC !important;
         min-height: -webkit-fill-available !important;
     }
 }
@@ -35,14 +35,14 @@ body {
     margin: 0 auto;
     padding: 0px;
     -webkit-text-size-adjust: 100%; /* Prevent text size adjustment */
-    background-color: #FFFFFF !important;
+    background-color: #FDFDFC !important;
     min-height: 100vh !important;
     height: 100% !important;
 }
 
 /* If you want to ensure the entire viewport is colored, also add this to the html element */
 html {
-    background-color: #FFFFFF !important;
+    background-color: #FDFDFC !important;
     min-height: 100% !important;
     height: 100% !important;
 }
@@ -569,4 +569,50 @@ html, body, .container {
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+/* Force consistent background color everywhere */
+:root, 
+html, 
+body, 
+.container {
+    background-color: #FDFDFC !important; /* Pure white */
+}
+
+/* Specific container fix */
+.container {
+    padding: 32px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FDFDFC !important; /* Match the body background */
+}
+
+/* iOS Safari specific fix */
+@supports (-webkit-touch-callout: none) {
+    .container {
+        background-color: #FDFDFC !important;
+    }
+}
+
+/* Mobile specific */
+@media screen and (max-width: 767px) {
+    .container {
+        background-color: #FDFDFC !important;
+    }
+}
+
+/* Specific fixes for different browsers */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Chrome/Safari/Arc specific adjustments */
+    h1 {
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (min--moz-device-pixel-ratio:0) {
+    /* Firefox specific adjustments */
+    h1 {
+        margin-bottom: 24px;
+    }
 }
