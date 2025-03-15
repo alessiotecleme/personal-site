@@ -1,3 +1,8 @@
+/* Force background color at the very top of the CSS */
+:root {
+    background-color: #FFFFFF !important;
+}
+
 /* Reset default styles */
 * {
     margin: 0;
@@ -8,15 +13,17 @@
 
 /* Add these rules at the top of your CSS file, right after the reset */
 html, body {
-    background-color: #FBFBFB !important; /* Force background color */
-    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #FFFFFF !important;
+    min-height: 100% !important;
+    height: 100% !important;
+    font-family: 'Founders Grotesk', sans-serif !important;
 }
 
 /* iOS Safari specific fix */
 @supports (-webkit-touch-callout: none) {
-    html, body {
-        background-color: #FBFBFB !important; /* Force background for iOS */
-        min-height: -webkit-fill-available; /* iOS viewport fix */
+    html, body, .container {
+        background-color: #FFFFFF !important;
+        min-height: -webkit-fill-available !important;
     }
 }
 
@@ -28,12 +35,16 @@ body {
     margin: 0 auto;
     padding: 0px;
     -webkit-text-size-adjust: 100%; /* Prevent text size adjustment */
-    background-color: #FBFBFB !important; /* Force background color */
+    background-color: #FFFFFF !important;
+    min-height: 100vh !important;
+    height: 100% !important;
 }
 
 /* If you want to ensure the entire viewport is colored, also add this to the html element */
 html {
-    background-color: #FBFBFB; /* Same color as body */
+    background-color: #FFFFFF !important;
+    min-height: 100% !important;
+    height: 100% !important;
 }
 
 .container {
@@ -41,6 +52,8 @@ html {
     display: block; /* Ensure block display */
     width: 100%; /* Ensure full width */
     box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #FFFFFF !important;
+    min-height: 100vh !important;
 }
 
 /* Regular text elements use Founders Grotesk */
@@ -406,7 +419,7 @@ h1 + p {
     }
 
     html, body {
-        background-color: #FFFFFF !important; /* Force background for mobile */
+        background-color: #FFFFFF !important;
     }
 }
 
@@ -548,4 +561,12 @@ h2 a, h2 a:link, h2 a:visited {
 /* Control spacing between h4 and following paragraphs */
 h4 + p {
     margin-top: 4px !important; /* Adjust this value to control spacing */
+}
+
+/* Force hardware acceleration */
+html, body, .container {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
