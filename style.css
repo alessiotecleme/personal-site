@@ -460,7 +460,7 @@ h5 + h2 {
 
 /* Add more spacing between h1 and h5 */
 h1 + h5 {
-    margin-top: 32px !important; /* Increase this value for more space */
+    margin-top: 48px !important; /* Increase this value for more space */
 }
 
 /* Add this: Mobile-specific adjustments for image placeholder */
