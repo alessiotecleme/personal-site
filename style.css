@@ -65,7 +65,7 @@ h4 + h2 {
 
 /* Control spacing between paragraphs and following h2 elements */
 p + h2 {
-    margin-top: 40px !important; /* Adjust this value to control spacing */
+    margin-top: 40px !important; /* This is the value you can adjust */
 }
 
 /* Target the specific Problem h2 to match Overview spacing */
@@ -357,8 +357,8 @@ h2, h3, h4, h5, h6, p, a:not(.header-link), span {
     font-family: 'Founders Grotesk', sans-serif !important;
 }
 
-/* Add this specific rule for h2 elements that aren't directly after h1 */
-h4 + h2, p + h2, div + h2 {
+/* Remove this conflicting selector from the combined rule */
+h4 + h2, div + h2 {
     margin-top: 24px;     /* Add space above h2 when it follows other elements */
     margin-bottom: 8px;  /* Controls spacing before paragraph */
 }
@@ -485,4 +485,9 @@ h1 + h5 {
 /* Ensure h2 links also have normal weight */
 h2 a, h2 a:link, h2 a:visited {
     font-weight: normal !important;
+}
+
+/* Control spacing between h4 and following paragraphs */
+h4 + p {
+    margin-top: 4px !important; /* Adjust this value to control spacing */
 }
