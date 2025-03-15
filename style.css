@@ -431,15 +431,15 @@ h5 + h2 {
 /* iOS Safari specific typography adjustments */
 @supports (-webkit-touch-callout: none) {
     h4, h4 a {
-        font-size: 16px !important; /* Reduced from 16px */
+        font-size: 16px !important; 
     }
     
     h5, h5 a {
-        font-size: 20px !important; /* Reduced from 20px */
+        font-size: 20px !important; 
     }
     
     .subtitle {
-        font-size: 16px !important; /* Slightly reduced */
+        font-size: 16px !important; 
     }
 }
 
@@ -456,4 +456,9 @@ h5 + h2 {
     .subtitle {
         font-size: 16px !important;
     }
+}
+
+/* Add more spacing between h1 and h5 */
+h1 + h5 {
+    margin-top: 32px !important; /* Increase this value for more space */
 }
