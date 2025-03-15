@@ -6,6 +6,20 @@
     font-family: 'Founders Grotesk', sans-serif !important;
 }
 
+/* Add these rules at the top of your CSS file, right after the reset */
+html, body {
+    background-color: #FAFAFA !important; /* Force background color */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* iOS Safari specific fix */
+@supports (-webkit-touch-callout: none) {
+    html, body {
+        background-color: #FAFAFA !important; /* Force background for iOS */
+        min-height: -webkit-fill-available; /* iOS viewport fix */
+    }
+}
+
 body {
     font-family: 'Founders Grotesk', sans-serif !important; /* Set Founders Grotesk as default font */
     line-height: 1.6;
@@ -14,7 +28,7 @@ body {
     margin: 0 auto;
     padding: 0px;
     -webkit-text-size-adjust: 100%; /* Prevent text size adjustment */
-    background-color: #FAFAFA; /* Add this line - I'm using white as an example */
+    background-color: #FAFAFA !important; /* Force background color */
 }
 
 /* If you want to ensure the entire viewport is colored, also add this to the html element */
@@ -389,6 +403,10 @@ h1 + p {
     .container {
         padding: 32px;
         padding-top: 64px;
+    }
+
+    html, body {
+        background-color: #FFFFFF !important; /* Force background for mobile */
     }
 }
 
