@@ -431,29 +431,29 @@ h5 + h2 {
 /* iOS Safari specific typography adjustments */
 @supports (-webkit-touch-callout: none) {
     h4, h4 a {
-        font-size: 14px !important; /* Reduced from 16px */
+        font-size: 16px !important; /* Reduced from 16px */
     }
     
     h5, h5 a {
-        font-size: 18px !important; /* Reduced from 20px */
+        font-size: 20px !important; /* Reduced from 20px */
     }
     
     .subtitle {
-        font-size: 14px !important; /* Slightly reduced */
+        font-size: 16px !important; /* Slightly reduced */
     }
 }
 
 /* Alternative iOS detection for older versions */
 @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
     h4, h4 a {
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
     
     h5, h5 a {
-        font-size: 18px !important;
+        font-size: 20px !important;
     }
     
     .subtitle {
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
 }
